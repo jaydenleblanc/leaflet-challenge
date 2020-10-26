@@ -61,7 +61,7 @@ function buildPlot(response) {
             fillOpacity: 0.75,
             color: getColor(response.features[i].geometry.coordinates[2]),
             fillcolor: "green",
-            radius: response.features[i].properties.mag
+            radius: response.features[i].properties.mag * 1500
         }).bindPopup("<h1>" + response.features[i].properties.place + "</h1>").addTo(map);
         // var earthquakeMagnitude = L.marker([magnitude]);
         earthquakeMarkers.push(earthquakeMarker);
